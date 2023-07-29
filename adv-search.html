@@ -9,10 +9,8 @@
       .container {
         display: grid;
         grid-template-columns: 1fr;
-        row-gap: 24px;
-        column-gap: 24px;
+        row-gap: 16px;
         margin: 0px;
-
       }
 
       .form-item {
@@ -56,8 +54,70 @@
                         <input type="number"> ~ 
                         <input type="number">
                     </div>
+                    <hr>
+                    <div class="form-item">
+                        <p>language:</p>
+                        <input name="languages" placeholder="all languages" list="languages">
+                        <datalist id="languages">
+                            <option value="English">
+                            <option value="Japanese">
+                            <option value="Vietnamese">
+                        </datalist>
+                    </div>
+                    <div class="form-item">
+                        <p>region:</p>
+                        <input name="regions" placeholder="region" list="regions">
+                        <datalist id="regions">
+                            <option value="America">
+                            <option value="Japan">
+                            <option value="Vietnam">
+                        </datalist>
+                    </div>
+                    <div class="form-item">
+                        <p>Last update:</p>
+                        <input name="updates" placeholder="unspecified" list="updates">
+                        <datalist id="updates">
+                            <option value="unspecified">
+                            <option value="within 24 hours">
+                            <option value="Within 1 week">
+                            <option value="Within 1 month">
+                            <option value="Within 1 year">
+                        </datalist>
+                    </div>
+                    <div class="form-item">
+                        <p>Site or Domain:</p>
+                        <input type="url">
+                    </div>
+                    <div class="form-item">
+                        <p>Search scope:</p>
+                        <input name="scope" placeholder="whole page" list="scope">
+                        <datalist id="scope">
+                            <option value="whole page">
+                            <option value="page title only">
+                            <option value="page body only">
+                            <option value="page URL only">
+                            <option value="in the link to that page">
+                        </datalist>
+                    </div>
+                    <div class="form-item">
+                        <p>File format:</p>
+                        <input name="format" placeholder="all formats" list="format">
+                        <datalist id="format">
+                            <option value="">
+                            <option value="">
+                            <option value="">
+                        </datalist>
+                    </div>
+                    <div class="form-item">
+                        <p>License:</p>
+                        <input name="license" placeholder="Do not filter by license" list="license">
+                        <datalist id="license">
+                            <option value="">
+                            <option value="">
+                            <option value="">
+                        </datalist>
+                    </div>
                 </div>
-                <hr>
             </form>
         </div>
     </section>
