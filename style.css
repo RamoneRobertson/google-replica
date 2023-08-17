@@ -24,14 +24,14 @@ img {
     margin: 16px;
 }
 
-form {
+.index-form {
     display: flex;
     flex-direction: column;
     margin: 16px;
     gap: 16px;
 }
 
-form [type="submit"] {
+.index-form [type="submit"] {
     padding: 16px;
     cursor: pointer;
     min-height: 54px;
@@ -55,3 +55,21 @@ form [type="text"] {
 img {
     margin: 8px;
 }
+
+/* Advanced search styling */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    margin: 0px;
+  }
+
+  .form-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-item > input {
+    border: 1px solid black;
+  }
