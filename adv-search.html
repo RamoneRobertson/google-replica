@@ -6,11 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <!-- <style>
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+        margin: 0px;
+      }
+
+      .form-item {
+        display: flex;
+        justify-content: space-between;
+        border: 1ps solid black;
+      }
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 16px;
+      }
+    </style> -->
 </head>
 <body>
     <header>
-        <label>search options</label>
-        <a href="./index.html">Search</a>
+        <div class="header">
+            <label>search options</label>
+            <a href="./index.html">Search</a>
+        </div>
         <hr>
     </header>
     <section>
@@ -18,32 +41,32 @@
             <label>Keyword to search</label>
         </div>
         <div>
-            <form>
+            <form action="https://www.google.com/search">
                 <div class="container">
                     <div class="form-item">
                         <p>Keywords to search</p>
-                        <input type="text">
+                        <input type="text" name="as_q">
                     </div>
                     <div class="form-item">
                         <p>Exact match including word order:</p>
-                        <input type="text">
+                        <input type="text" name="as_epq">
                     </div>
                     <div class="form-item">
                         <p>Contains one of the keywords:</p>
-                        <input type="text">
+                        <input type="text" name="as_oq">
                     </div>
                     <div class="form-item">
                         <p>Keywords to exclude:</p>
-                        <input type="text">
+                        <input type="text" name="as_eq">
                     </div>
                     <div class="form-item">
                         <p>Numeric range:</p>
-                        <input type="number"> ~ <input type="number">
+                        <input type="number" name="as_nlo"> ~ <input type="number" name="as_nhi">
                     </div>
                     <hr>
                     <div class="form-item">
                         <p>language:</p>
-                        <input name="languages" placeholder="all languages" list="languages">
+                        <input name="languages" placeholder="all languages" list="languages" name="lr">
                         <datalist id="languages">
                             <option value="English">
                             <option value="Japanese">
@@ -52,7 +75,7 @@
                     </div>
                     <div class="form-item">
                         <p>region:</p>
-                        <input name="regions" placeholder="region" list="regions">
+                        <input name="regions" placeholder="region" list="regions" name="cr">
                         <datalist id="regions">
                             <option value="America">
                             <option value="Japan">
@@ -61,7 +84,7 @@
                     </div>
                     <div class="form-item">
                         <p>Last update:</p>
-                        <input name="updates" placeholder="unspecified" list="updates">
+                        <input name="updates" placeholder="unspecified" list="updates" name="qdr">
                         <datalist id="updates">
                             <option value="unspecified">
                             <option value="within 24 hours">
@@ -72,11 +95,11 @@
                     </div>
                     <div class="form-item">
                         <p>Site or Domain:</p>
-                        <input type="url">
+                        <input type="url" name="as_sitesearch">
                     </div>
                     <div class="form-item">
                         <p>Search scope:</p>
-                        <input name="scope" placeholder="whole page" list="scope">
+                        <input name="scope" placeholder="whole page" list="scope" name="as_occt">
                         <datalist id="scope">
                             <option value="whole page">
                             <option value="page title only">
@@ -87,7 +110,7 @@
                     </div>
                     <div class="form-item">
                         <p>File format:</p>
-                        <input name="format" placeholder="all formats" list="format">
+                        <input name="format" placeholder="all formats" list="format" name="as_filetype">
                         <datalist id="format">
                             <option value="">
                             <option value="">
@@ -96,13 +119,14 @@
                     </div>
                     <div class="form-item">
                         <p>License:</p>
-                        <input name="license" placeholder="Do not filter by license" list="license">
+                        <input name="license" placeholder="Do not filter by license" list="license" name="tbs">
                         <datalist id="license">
                             <option value="">
                             <option value="">
                             <option value="">
                         </datalist>
                     </div>
+                    <input id="adv-btn" type="submit" value="detailed search">
                 </div>
             </form>
         </div>
