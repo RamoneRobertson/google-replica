@@ -73,3 +73,17 @@ img {
   .form-item > input {
     border: 1px solid black;
   }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 16px;
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 16px;
+  }
