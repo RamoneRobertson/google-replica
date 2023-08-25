@@ -2,6 +2,14 @@ body {
   color: #3c4043;
   background: #ffff;
 }
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin: 16px;
+}
+
 img {
     width: 50%;
     height: 50%;
@@ -19,14 +27,7 @@ img {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-.links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    margin: 16px;
+    transform: translate(-50%, -50%);
 }
 
 .form {
@@ -37,7 +38,7 @@ img {
     width: 584px;
 }
 
-#search-box {
+.textbox > input {
     border: none;
     outline: none;
     background: transparent;
@@ -47,9 +48,14 @@ img {
     width: 584px;
 }
 
-#textbox:focus {
+.textbox > input:focus {
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.textbox > input:hover {
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .textbox {
@@ -57,8 +63,6 @@ img {
     justify-content: flex-start;
     cursor: auto;
     border-radius: 24px;
-    outline: none;
-    background: transparent;
     border: 1px solid #dfe1e5;
     margin: 0 auto;
 }
