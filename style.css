@@ -1,29 +1,29 @@
 body {
-  color: #3c4043;
-  background: #ffff;
+    color: #3c4043;
+    background: #ffff;
 }
 
 .links {
-  display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-  margin: 16px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin: 16px;
 }
 
 .links > a {
-  text-decoration: none;
-  color: rgba(0,0,0,.87);
-  font-size: 13px;
+    text-decoration: none;
+    color: rgba(0,0,0,.87);
+    font-size: 13px;
 }
 
 .links > a:hover {
-  text-decoration: underline;
-  color: dodgerblue;
+    text-decoration: underline;
+    color: dodgerblue;
 }
 
 img {
-    width: 50%;
-    height: 50%;
+    width: 272px;
+    height: 92px;
     margin: 8px;
 }
 
@@ -65,8 +65,8 @@ img {
 }
 
 .textbox > input:hover {
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .textbox {
@@ -79,11 +79,11 @@ img {
 }
 
 .submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 16px;
-  gap: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    gap: 8px;
 }
 
 @media (max-width: 600px) {
@@ -93,53 +93,58 @@ img {
 }
 
 .submit > input {
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
-  border-radius: 4px;
-  color: #3c4043;
-  font-family: arial,sans-serif;
-  font-size: 14px;
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  height: 36px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .submit > input:hover {
-  border-color: rgb(195, 195, 195);
+    border-color: rgb(195, 195, 195);
 }
 
 /* Advanced search styling */
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 16px;
-    margin: 0px;
+    column-gap: 10px;
+    margin: 0px 24px;
   }
 
   .form-item {
-    display: flex;
-    justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
+      height: 25px;
+      border-radius: 1px;
+      margin: 0;
+  }
+
+  .form-item:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 
   .form-item > input {
-    border: 1px solid black;
+      border: 1px solid #d9d9d9;
+      border-top: 1px solid #c0c0c0;
+      font-size: 13px;
+      height: 25px;
+      padding: 1px 8px;
   }
 
-  .header{
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin: 16px;
-  }
-
-  .header{
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin: 16px;
+  .header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 16px;
   }
