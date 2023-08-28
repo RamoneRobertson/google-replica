@@ -1,51 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Advanced Search</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <header>
-        <div class="header">
-            <label>search options</label>
-            <a href="./index.html">Search</a>
-        </div>
+    <head>
+        <title>Advanced Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <header class="header">
+                <label>search options</label>
+                <a href="./index.html">Search</a>
+        </header>
+
         <hr>
-    </header>
-    <section>
-        <div>
+
+        <main>
             <label>Keyword to search</label>
-        </div>
-        <div>
-            <form action="https://www.google.com/search">
-                <div class="container">
-                    <div class="form-item">
-                            <p>Keywords to search</p>
-                            <input type="text" name="as_q">
+            <div class="content-container">
+                <form action="https://www.google.com/search">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Keywords to search</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" name="as_q"> 
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Exact match including word order:</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" name="as_epq">
+                            </div>
+                        </div>
+
+                         <div class="row">
+                            <div class="col-2">
+                                <p>Contains one of the keywords:</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" name="as_oq">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Keywords to exclude:</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" name="as_eq">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Numeric range:</p>
+                            </div>
+                            <div class="col-5">
+                                <div>
+                                    <input type="number" name="as_nlo"> ~ <input type="number" name="as_nhi">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-item">
-                        <p>Exact match including word order:</p>
-                        <input type="text" name="as_epq">
-                    </div>
-                    <div class="form-item">
-                        <p>Contains one of the keywords:</p>
-                        <input type="text" name="as_oq">
-                    </div>
-                    <div class="form-item">
-                        <p>Keywords to exclude:</p>
-                        <input type="text" name="as_eq">
-                    </div>
-                    <div class="form-item">
-                        <p>Numeric range:</p>
-                        <input type="number" name="as_nlo"> ~ <input type="number" name="as_nhi">
-                    </div>
-                    <hr>
-                    <div class="form-item">
-                        <p>language:</p>
-                        <input placeholder="all languages" list="languages" role="listbox" name="lr">
+                   
+                    <hr id="divider">
+                
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2">
+                                <p>language:</p>
+                            </div>
+                            <div class="col-5">
+                                <input placeholder="all languages" list="languages" role="listbox" name="lr">
+                            </div>
+                        </div>
                         <datalist id="languages">
                             <option value="">languages</option>
                             <option value="lang_af">Afrikaans</option>
@@ -191,10 +224,16 @@
                             <option value="lang_yo">Yoruba</option>
                             <option value="lang_zu">Zulu</option>
                         </datalist>
-                    </div>
-                    <div class="form-item">
-                        <p>region:</p>
-                        <input placeholder="region" list="regions" name="cr">
+
+                        <div class="row">
+                            <div class="col-2">
+                                <p>region:</p>
+                            </div>
+                            <div class="col-5">
+                                <input placeholder="region" list="regions" name="cr">
+                            </div>
+                        </div>
+                        
                         <datalist id="regions">
                             <option value="Afghanistan">
                                 <option>select country</option>
@@ -451,10 +490,17 @@
                                 <option value="ZM">Zambia</option>
                                 <option value="ZW">Zimbabwe</option>
                         </datalist>
-                    </div>
-                    <div class="form-item">
-                        <p>Last update:</p>
-                        <input name="updates" placeholder="unspecified" list="updates" name="qdr">
+                    
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Last update:</p>
+                            </div>
+                            <div class="col-5">
+                                <input name="updates" placeholder="unspecified" list="updates" name="qdr">
+                            </div>
+                        </div>
+                        
+                        
                         <datalist id="updates">
                             <option value="unspecified">
                             <option value="within 24 hours">
@@ -462,14 +508,25 @@
                             <option value="Within 1 month">
                             <option value="Within 1 year">
                         </datalist>
-                    </div>
-                    <div class="form-item">
-                        <p>Site or Domain:</p>
-                        <input type="url" name="as_sitesearch">
-                    </div>
-                    <div class="form-item">
-                        <p>Search scope:</p>
-                        <input name="scope" placeholder="whole page" list="scope" name="as_occt">
+                    
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Site or Domain:</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="url" name="as_sitesearch">
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Search scope:</p>
+                            </div>
+                            <div class="col-5">
+                                <input name="scope" placeholder="whole page" list="scope" name="as_occt">
+                            </div>
+                        </div>
+                    
                         <datalist id="scope">
                             <option value="whole page">
                             <option value="page title only">
@@ -477,30 +534,42 @@
                             <option value="page URL only">
                             <option value="in the link to that page">
                         </datalist>
-                    </div>
-                    <div class="form-item">
-                        <p>File format:</p>
-                        <input name="format" placeholder="all formats" list="format" name="as_filetype">
+                    
+                        <div class="row">
+                            <div class="col-2">
+                                <p>File format:</p>
+                            </div>
+                            <div class="col-5">
+                                <input name="format" placeholder="all formats" list="format" name="as_filetype">
+                            </div>
+                        </div>
+                    
                         <datalist id="format">
                             <option value="">
                             <option value="">
                             <option value="">
                         </datalist>
-                    </div>
-                    <div class="form-item">
-                        <p>License:</p>
-                        <input name="license" placeholder="Do not filter by license" list="license" name="tbs">
+                    
+                        <div class="row">
+                            <div class="col-2">
+                                <p>License:</p>
+                            </div>
+                            <div class="col-5">
+                                <input name="license" placeholder="Do not filter by license" list="license" name="tbs">
+                            </div>
+                        </div>
+
                         <datalist id="license">
                             <option value="Free to use or share">
                             <option value="Free to use or share, including for commercial purposes">
                             <option value="Free to use, share, or modify">
                             <option value="Free to use, share or modify, including for commercial purposes">
                         </datalist>
+                    
+                        <input id="adv-btn" type="submit" value="detailed search">
                     </div>
-                    <input id="adv-btn" type="submit" value="detailed search">
-                </div>
-            </form>
-        </div>
-    </section>
-</body>
+                </form>
+            </div>
+        </main>
+    </body>
 </html>
