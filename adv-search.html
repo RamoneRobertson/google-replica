@@ -9,23 +9,31 @@
     </head>
     <body>
         <header class="header">
-                <label>search options</label>
+                <label id="search-lbl">search options</label>
                 <a href="./index.html">Search</a>
         </header>
 
         <hr>
 
         <main>
-            <label>Keyword to search</label>
             <div class="content-container">
                 <form action="https://www.google.com/search">
                     <div class="container">
                         <div class="row mb-2">
                             <div class="col-sm-2">
-                                <p>Keywords to search</p>
+                                <p>Keyword to search</p>
                             </div>
                             <div class="col-5">
                                 <input type="text" name="as_q"> 
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-sm-2">
+                                <p>Include all keywords:</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" name="as_q">
                             </div>
                         </div>
 
